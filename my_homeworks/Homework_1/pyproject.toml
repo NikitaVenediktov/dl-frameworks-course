@@ -16,6 +16,7 @@ pandas = "^2.0.2"
 wandb = "^0.15.4"
 xgboost = "^1.7.5"
 dvc = "^2.58.2"
+dvc-gdrive = "^2.19.2"
 
 
 [build-system]
