@@ -4,7 +4,6 @@ version = "0.1.0"
 description = "MIPT x AITalentHub"
 authors = ["NikitaVenediktov <n.venediktov@gmail.com>"]
 readme = "README.md"
-packages = [{include = "hate_comments"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -17,6 +16,10 @@ wandb = "^0.15.4"
 xgboost = "^1.7.5"
 dvc = "^2.58.2"
 dvc-gdrive = "^2.19.2"
+wordcloud = "^1.9.2"
+lazypredict = "^0.2.12"
+imbalanced-learn = "^0.10.1"
+nltk = "^3.8.1"
 
 
 [build-system]
