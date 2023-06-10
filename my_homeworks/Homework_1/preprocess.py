@@ -4,13 +4,12 @@
 import re
 import string
 import pandas as pd
-import nltk
 import subprocess
+import os
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer
 from nltk.stem import WordNetLemmatizer
-from dvc.api import DVCFileSystem
-
+from pathlib import Path
 stemmer = SnowballStemmer("english")
 wordnet_lemmatizer = WordNetLemmatizer()
 stopword = set(stopwords.words('english'))
@@ -50,7 +49,8 @@ def load_data():
     Загрузка данных и предобработка
     '''
     subprocess.run(['dvc', 'pull'])
-    df_pd = pd.read_csv('data/Ethos_Dataset_Binary.csv', delimiter=';')
+    dataset = os.path.join(os.getcwd(), 'data/Ethos_Dataset_Binary.csv')
+    df_pd = pd.read_csv(dataset, delimiter=';')
     df_pd.rename(columns={'isHate': 'label'}, inplace=True)
     df_pd.loc[:, 'label'] = df_pd.label.apply(count)
     df_pd['comment'] = df_pd['comment'].apply(clean_text)

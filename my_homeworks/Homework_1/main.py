@@ -1,4 +1,6 @@
-# from preprocess import load_data
+'''
+итоговая работка на первую дз
+'''
 
 import optuna
 import subprocess
@@ -9,7 +11,7 @@ from datetime import datetime
 from preprocess import load_data
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from xgboost import XGBClassifier
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+from sklearn.metrics import accuracy_score
 import joblib
 import json
 
@@ -80,6 +82,7 @@ joblib.dump(model, model_filename)
 
 # Create a report
 report = {
+    'Text': 'Никитос продолжай)!',
     'Model': 'XGBClassifier',
     'timestamp': timestamp,
     'best_params': best_params,
