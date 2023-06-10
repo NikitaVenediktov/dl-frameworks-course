@@ -1,6 +1,7 @@
 aiohttp==3.8.4
 aiohttp-retry==2.8.3
 aiosignal==1.3.1
+alembic==1.11.1
 amqp==5.1.1
 antlr4-python3-runtime==4.9.3
 appdirs==1.4.4
@@ -18,7 +19,9 @@ click==8.1.3
 click-didyoumean==0.3.0
 click-plugins==1.1.1
 click-repl==0.2.0
+cmaes==0.9.1
 colorama==0.4.6
+colorlog==6.7.0
 configobj==5.0.8
 contourpy==1.0.7
 cryptography==41.0.1
@@ -52,6 +55,7 @@ google-auth==2.17.3
 google-auth-httplib2==0.1.0
 googleapis-common-protos==1.59.0
 grandalf==0.8
+greenlet==2.0.2
 httplib2==0.22.0
 hydra-core==1.3.2
 idna==3.4
@@ -62,15 +66,19 @@ kiwisolver==1.4.4
 kombu==5.3.0
 lazypredict==0.2.12
 lightgbm==3.3.5
+Mako==1.2.4
 markdown-it-py==2.2.0
+MarkupSafe==2.1.3
 matplotlib==3.7.1
 mdurl==0.1.2
 multidict==6.0.4
 nanotime==0.5.2
 networkx==3.1
+nltk==3.8.1
 numpy==1.24.3
 oauth2client==4.1.3
 omegaconf==2.3.0
+optuna==3.2.0
 orjson==3.9.0
 packaging==23.1
 pandas==2.0.2
@@ -78,6 +86,7 @@ pathspec==0.11.1
 pathtools==0.1.2
 Pillow==9.5.0
 platformdirs==3.5.1
+polars==0.18.2
 prompt-toolkit==3.0.38
 protobuf==4.23.2
 psutil==5.9.5
@@ -94,6 +103,7 @@ pyparsing==3.0.9
 python-dateutil==2.8.2
 pytz==2023.3
 PyYAML==6.0
+regex==2023.6.3
 requests==2.31.0
 rich==13.4.1
 rsa==4.9
@@ -109,6 +119,7 @@ shortuuid==1.0.11
 shtab==1.6.1
 six==1.16.0
 smmap==5.0.0
+SQLAlchemy==2.0.15
 sqltrie==0.4.0
 tabulate==0.9.0
 threadpoolctl==3.1.0

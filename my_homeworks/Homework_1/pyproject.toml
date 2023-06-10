@@ -21,6 +21,7 @@ lazypredict = "^0.2.12"
 imbalanced-learn = "^0.10.1"
 nltk = "^3.8.1"
 polars = "^0.18.2"
+optuna = "^3.2.0"
 
 
 [build-system]
