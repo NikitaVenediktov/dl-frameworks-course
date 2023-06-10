@@ -32,7 +32,6 @@
 - Настройл DVC - репозиторий 
 - Залогировал в нем все изменения, которые случились в ходе эксперимента: hyperparameters, evaluation metrics, dataset versions, model versions, etc
 - Короткий summary report моих экспериментов в отдельном файле (json) - в папке report.
-
 ### Оценки - это я для себя):
 - [x] Dataset loading and model selection: 5 points
 - [x] Hyperparameter optimization: 5 points
