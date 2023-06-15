@@ -2,11 +2,14 @@
 name = "homework-2"
 version = "0.1.0"
 description = ""
-authors = ["NikitaVenediktov <n.venediktov@gmail.com>"]
+authors = ["NikitaV <n.venediktov@gmail.com>"]
 readme = "README.md"
+packages = [{include = "homework_2"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pandas = "^2.0.2"
+numpy = "^1.24.3"
 
 
 [build-system]
