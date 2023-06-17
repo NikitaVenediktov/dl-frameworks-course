@@ -2,6 +2,50 @@ import os
 import random
 
 import streamlit as st
+import pandas as pd
+
+@st.cache
+def get_data_movie_final():
+     return pd.read_csv('./data/clean_data/movie_final.csv')
+
+
+st.set_page_config(layout="wide")
+df_data = get_data_movie_final()
+st.title('Nikitas Project)))')
+st.markdown("""
+lol kek jeburek
+""")
+# st.write(df_data)
+
+#Делаем визуализацию интерактивной плашки название фильма
+st.sidebar.header('Select film to display')
+movie_title = df_data['movie_title'].unique().tolist()
+movie_title_selected = st.sidebar.multiselect('Movie title', movie_title)
+
+#создаем маску с выбором фильма
+mask_movie_title = df_data['movie_title'].isin(movie_title_selected)
+
+#накладываем маску с выбором фильма
+df_data_filtered = df_data[mask_movie_title]
+st.write(df_data_filtered)
+
+#Делаем визуализацию интерактивной плашки имя персонажа
+st.sidebar.header('Select speaker to display')
+speaker_name = df_data_filtered['names'].unique().tolist()
+speaker_name_selected = st.sidebar.multiselect('Speaker name', speaker_name)
+
+#создаем маску с выбором перса
+mask_speaker_name = df_data['names'].isin(speaker_name_selected)
+#накладываем маску с выбором фильм
+df_data_filtered1 = df_data[mask_speaker_name & mask_movie_title]
+st.title(print(mask_speaker_name))
+if df_data_filtered1 is None:
+    st.write(df_data_filtered)
+else:
+    st.write(df_data_filtered1)
+
+st.write
+
 
 
 def show():
